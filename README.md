@@ -2,12 +2,12 @@ This tool creates trusted applications from security sensitive applications usin
 
 ## Installation guides: ##
 
-* Open-TEE: https://github.com/Open-TEE/
+* Open-TEE: https://github.com/Open-TEE/project
 * PyCParser: https://github.com/eliben/pycparser
 
 ## Run tests: ##
 
-To run the test suite provided, configure /etc/opentee.conf lib location to point to <tool_source_dir/lib>.
+To run the test suite provided, configure /etc/opentee.conf ta_dir_path location to point to <tool_source_dir/lib>.
 
 Configure the `opentee_path.conf` file to point the location of the Open-TEE source and emulator. By default, Open-TEE installs itself to `/opt/Open-TEE/`. Use absolute paths, do not use any special variables such as `~` or `$HOME`.
 
