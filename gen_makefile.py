@@ -22,8 +22,8 @@ ca_obj = "OBJ = session_ca.o param_io_ca.o crypto_operations_ca.o ca_"
 ta_obj = "OBJ = param_io_ta.o crypto_operations_ta.o ta_"
 
 c_to_o = "%.o: %.c $(DEPS)\n\t$(CC) -c -o $@ $< $(CFLAGS)\n\n"
-ca_o_to_bin = ": $(OBJ)\n\tgcc -Wall -o $@ $^  $(CFLAGS) -L $(OPENTEE_PATH)/lib -ltee -lssl -lcrypto \n\tmv $@ "+bin_path+"\n\n"
-ta_o_to_so = ".so: $(OBJ)\n\tgcc -Wall -shared -o $@ $^  $(CFLAGS) -L $(OPENTEE_PATH)/lib -ltee\n\tmv $@ "+lib_path+"\n\n"
+ca_o_to_bin = ": $(OBJ)\n\tgcc -Wall -o $@ $^  $(CFLAGS) -L $(OPENTEE_PATH)lib -ltee -lssl -lcrypto \n\tmv $@ "+bin_path+"\n\n"
+ta_o_to_so = ".so: $(OBJ)\n\tgcc -Wall -shared -o $@ $^  $(CFLAGS) -L $(OPENTEE_PATH)lib -ltee\n\tmv $@ "+lib_path+"\n\n"
 
 
 clean = "\nclean:\n\trm *.o"
