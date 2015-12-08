@@ -28,4 +28,6 @@ TEE_Result TA_EXPORT TEE_RSA_OAEP(uint32_t mode, uint32_t keyID, uint8_t* inputB
 
 void TEE_genKey(uint32_t keyType, uint32_t keyLen, TEE_ObjectHandle* keyObject,
                 uint32_t objectID, uint32_t objectIDlen, uint32_t pubexp);
+TEE_Result TA_EXPORT TEE_importRSAKey(uint32_t keyLen, uint32_t keyID, TEE_ObjectHandle* keyObject, uint8_t* mod, uint8_t* pub_exp,
+						uint8_t* priv_exp, uint8_t* p1, uint8_t* p2, uint8_t* e1, uint8_t* e2, uint8_t* coeff);
 TEE_Result TA_EXPORT TEE_importBitkey(uint32_t keyType, uint32_t keyLen, uint32_t keyID, uint8_t* key, TEE_ObjectHandle* keyObject);

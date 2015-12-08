@@ -187,7 +187,6 @@ int TEEC_RSA_private_encrypt(int flen, unsigned char *from,
 
 int TEEC_RSA_public_decrypt(int flen, unsigned char *from, 
     unsigned char *to, uint32_t rsa, int padding) {
-    // Success
     InitializeSharedMem(292);
 	operation.params[1].memref.parent = &mem;
     memmove(mem.buffer, from, 32);
