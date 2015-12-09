@@ -2,14 +2,19 @@ This tool creates trusted applications from security sensitive applications usin
 
 ## Installation guides: ##
 
-* Open-TEE: https://github.com/Open-TEE/project
-* PyCParser: https://github.com/eliben/pycparser
+This tool requires PyCParsing for parsing the C source code. The index of the package is available at https://github.com/eliben/pycparser
+
+For installing PyCParser with pip, simply run
+
+	pip install pycparser
+
+The generated test cases use Open-TEE as trusted execution environment. The installation guide is available at https://github.com/Open-TEE/project
 
 ## Run tests: ##
 
 To run the test suite provided, configure /etc/opentee.conf ta_dir_path location to point to tool_source_dir/lib 
 
-Configure the `opentee_path.conf` file to point the location of the Open-TEE source and emulator. By default, Open-TEE installs itself to `/opt/Open-TEE/`. Use absolute paths, do not use any special variables such as `~` or `$HOME`.
+Configure the `opentee_path.conf` file to point the location of the Open-TEE source and emulator. By default, Open-TEE installs itself to `/opt/Open-TEE/`. Use absolute paths, do not use any special variables such as `~` or `$HOME`. End the path with `/`
 
 	OPENTEE_PATH = <path to /opt/Open-TEE>
 	DIR_PATH = <path to Open-TEE source>
@@ -20,6 +25,7 @@ Configure the `opentee_path.conf` file to point the location of the Open-TEE sou
 
 The script will create 4 test applications to CA and TA folders.
 Compile the tests with `make` and run them with `make check`.
+The script does not clean or overwrite the existing data, so remove the generated files and directories before re-running the script.
 
 ## Tool usage: ##
 	
