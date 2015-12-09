@@ -12,7 +12,7 @@ The generated test cases use Open-TEE as trusted execution environment. The inst
 
 ## Run tests: ##
 
-To run the test suite provided, configure /etc/opentee.conf ta_dir_path location to point to tool_source_dir/lib 
+To run the test suite provided, configure `/etc/opentee.conf` ta_dir_path location to point to tool_source_dir/lib 
 
 Configure the `opentee_path.conf` file to point the location of the Open-TEE source and emulator. By default, Open-TEE installs itself to `/opt/Open-TEE/`. Use absolute paths, do not use any special variables such as `~` or `$HOME`. End the path with `/`
 
@@ -36,6 +36,8 @@ Input file parameter is mandatory. You can define additional arguments to the to
 By default, the generated trusted application source files are included to `/CA` and `/TA` directories to the same filepath that the parser application resides in. If an output path is defined, these directories are created to that path if they do not exist.
 
 The generated makefiles will move the compiled applications to the same level with the CA and TA dirs, to the bin and lib directories. Remember to point the Open-TEE configuration file to the lib directory.
+
+A detailed technical report is available at http://users.cs.hut.fi/~tynninp1/technical_report.pdf
 
 ## Code annotation: ##
 
