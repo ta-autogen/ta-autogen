@@ -7,6 +7,7 @@
 void InitializeTEEC();
 void AllocateMemory(struct marshal_parameters* param_struct, uint8_t* buffer);
 void ReleaseMemory();
+void InitializeSharedMem(int size);
 void InvokeCommand(int command, void* ret);
 void end_3();
 void add_parameter(struct marshal_parameters* marshal, uint8_t* param_data, uint16_t data_len, uint8_t* buffer);
